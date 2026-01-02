@@ -6,37 +6,54 @@
     <title>Patrons Eye | Real-Time Counter-Picker</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { 
-            background-color: #0f172a; 
-            color: white; 
-            scroll-behavior: smooth;
-            /* Background Logo Implementation */
-            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('PatronsEyeLogo.png');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 40%; /* Increase this % to make the background logo larger */
-        }
-        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass-panel { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-    </style>
-</head>
-<body class="font-sans antialiased">
+    body { 
+        background-color: #0f172a; 
+        color: white; 
+        scroll-behavior: smooth;
+        /* Brand Background Watermark */
+        background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('PatronsEyeLogo.png');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 35%;
+    }
+    /* Updated Gradient: Clean Gold to Amber */
+    .gradient-text { 
+        background: linear-gradient(90deg, #FFEFAD, #E5A02E); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+    }
+    /* Moss Green Border Accents */
+    .glass-panel { 
+        background: rgba(30, 41, 59, 0.6); 
+        backdrop-filter: blur(12px); 
+        border: 1px solid rgba(136, 176, 75, 0.2); 
+    }
+    /* Amethyst Glow for Buttons */
+    .brand-button {
+        background-color: #E5A02E;
+        box-shadow: 0 10px 15px -3px rgba(155, 89, 182, 0.3);
+        transition: all 0.3s ease;
+    }
+    .brand-button:hover {
+        background-color: #FFEFAD;
+        color: #0f172a;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -3px rgba(136, 176, 75, 0.4);
+    }
+</style>
 
-    <nav class="sticky top-0 z-50 glass-panel px-8 py-4">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <img src="PatronsEyeLogo.png" alt="Patrons Eye Logo" class="h-10 w-auto">
-                <span class="text-2xl font-bold gradient-text">Patrons Eye</span>
-            </div>
-            <div class="hidden md:flex space-x-8 text-gray-400 font-medium">
-                <a href="#security" class="hover:text-white transition">Security</a>
-                <a href="#install" class="hover:text-white transition">Setup</a>
-                <a href="#faq" class="hover:text-white transition">FAQ</a>
-                <a href="https://github.com/DeadlockTool/PatronsEye/discussions" target="_blank" class="hover:text-white transition">Community</a>
-            </div>
-            <a href="https://github.com/DeadlockTool/PatronsEye/releases" class="bg-indigo-600 text-white px-5 py-2 rounded-lg font-bold hover:bg-indigo-500 transition">Download</a>
-        </div>
+<div class="flex flex-col md:flex-row justify-center items-center gap-4">
+    <a href="https://github.com/DeadlockTool/PatronsEye/releases/download/v1.0.0/PatronsEye_v1.0.zip" 
+       class="brand-button w-full md:w-auto px-10 py-4 rounded-xl text-xl font-bold text-center">
+        Download Patrons Eye
+    </a>
+    <a href="https://github.com/DeadlockTool/PatronsEye" 
+       target="_blank" 
+       class="w-full md:w-auto border border-[#9B59B6] px-10 py-4 rounded-xl text-xl font-bold hover:bg-slate-800 transition text-center text-[#9B59B6]">
+        View Source
+    </a>
+</div>
     </nav>
 
     <header class="text-center py-24 px-4 max-w-4xl mx-auto">
