@@ -7,74 +7,87 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { 
-            background-color: #0f172a; 
-            color: white; 
-            scroll-behavior: smooth;
-            /* Logo Watermark Background */
-            background-image: linear-gradient(rgba(15, 23, 42, 0.50), rgba(15, 23, 42, 0.50)), url('PatronsEyeLogo.png');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 40%;
-            /* Apply futuristic font globally */
-            font-family: 'Orbitron', sans-serif;
-        }
+    body { 
+        background-color: #0f172a; 
+        color: white; 
+        scroll-behavior: smooth;
+        /* Logo Watermark Background */
+        background-image: linear-gradient(rgba(15, 23, 42, 0.50), rgba(15, 23, 42, 0.50)), url('PatronsEyeLogo.png');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 40%;
+        font-family: 'Orbitron', sans-serif;
+    }
 
-        /* Logic for Logo-style text: Bold, Italicized, and Slanted */
-        .logo-font {
-            font-weight: 900;
-            font-style: italic;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            /* Slants the text forward like the logo */
-            transform: skewX(-10deg);
-            display: inline-block;
-        }
+    /* Base Logo Font Style */
+    .logo-font {
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transform: skewX(-10deg);
+        display: inline-block;
+    }
 
-        /* Custom Brand Color Palette */
-        .gradient-text { 
-            background: linear-gradient(90deg, #FFEFAD, #E5A02E); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
+    /* --- SUGGESTION 1: METALLIC GOLD GLOW (Clean & Premium) --- */
+    .text-metallic { 
+        color: #FFEFAD;
+        text-shadow: 0 0 15px rgba(229, 160, 46, 0.6);
+        -webkit-text-fill-color: #FFEFAD; 
+    }
 
-        .glass-panel { 
-            background: rgba(30, 41, 59, 0.6); 
-            backdrop-filter: blur(12px); 
-            border: 1px solid rgba(136, 176, 75, 0.3); /* Moss Green Accents */
-        }
+    /* --- SUGGESTION 2: CYBER OUTLINE (Modern Gaming/HUD) --- */
+    .text-cyber {
+        color: transparent;
+        -webkit-text-stroke: 1.5px #FFEFAD;
+        filter: drop-shadow(0 0 8px rgba(255, 239, 173, 0.4));
+        -webkit-text-fill-color: transparent;
+    }
 
-        .brand-button-main {
-            background-color: #E5A02E; /* Amber */
-            color: #0f172a;
-            box-shadow: 0 4px 15px rgba(155, 89, 182, 0.3); /* Amethyst Glow */
-            transition: all 0.3s ease;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
+    /* --- SUGGESTION 3: SOLID BRAND AMBER (Minimalist/Bold) --- */
+    .text-solid-brand {
+        color: #E5A02E;
+        -webkit-text-fill-color: #E5A02E;
+        text-shadow: none;
+    }
 
-        .brand-button-main:hover {
-            background-color: #FFEFAD; /* Gold */
-            transform: translateY(-2px) skewX(-10deg); /* Slanted hover effect */
-            box-shadow: 0 6px 20px rgba(136, 176, 75, 0.5); /* Moss Green Glow */
-        }
+    .glass-panel { 
+        background: rgba(30, 41, 59, 0.6); 
+        backdrop-filter: blur(12px); 
+        border: 1px solid rgba(136, 176, 75, 0.3); /* Moss Green Accents */
+    }
 
-        .brand-button-outline {
-            border: 2px solid #9B59B6; /* Amethyst */
-            color: #9B59B6;
-            transition: all 0.3s ease;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
+    .brand-button-main {
+        background-color: #E5A02E; /* Amber */
+        color: #0f172a;
+        box-shadow: 0 4px 15px rgba(155, 89, 182, 0.3); /* Amethyst Glow */
+        transition: all 0.3s ease;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
 
-        .brand-button-outline:hover {
-            background-color: rgba(155, 89, 182, 0.1);
-            border-color: #FFEFAD;
-            color: #FFEFAD;
-            transform: skewX(-10deg);
-        }
-    </style>
+    .brand-button-main:hover {
+        background-color: #FFEFAD; /* Gold */
+        transform: translateY(-2px) skewX(-10deg);
+        box-shadow: 0 6px 20px rgba(136, 176, 75, 0.5);
+    }
+
+    .brand-button-outline {
+        border: 2px solid #9B59B6; /* Amethyst */
+        color: #9B59B6;
+        transition: all 0.3s ease;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .brand-button-outline:hover {
+        background-color: rgba(155, 89, 182, 0.1);
+        border-color: #FFEFAD;
+        color: #FFEFAD;
+        transform: skewX(-10deg);
+    }
+</style>
 </head>
 <body class="font-sans antialiased">
 
@@ -82,7 +95,7 @@
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <img src="PatronsEyeLogo.png" alt="Patrons Eye Logo" class="h-10 w-auto">
-                <span class="text-2xl font-bold logo-font gradient-text">Patron's Eye</span>
+                <span class="text-2xl font-bold logo-font metallic-text">Patron's Eye</span>
             </div>
             <div class="hidden md:flex space-x-8 text-gray-400 font-medium">
                 <a href="#security" class="hover:text-[#FFEFAD] transition">Security</a>
@@ -95,7 +108,7 @@
     </nav>
 
     <header class="text-center py-32 px-4 max-w-4xl mx-auto">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight logo-font">Watch the Meta with <span class="gradient-text">Patron's Eye</span></h1>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight logo-font">Watch the Meta with <span class="metallic-text">Patron's Eye</span></h1>
         <p class="text-xl text-gray-400 mb-10 leading-relaxed">
             Advanced OCR overlay for Deadlock. Instantly scan enemy rosters and get professional item counter suggestions verified for <strong>Build 21231827</strong>.
         </p>
