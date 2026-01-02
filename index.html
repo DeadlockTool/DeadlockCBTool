@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patron's Eye | Real-Time Counter-Picker</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { 
             background-color: #0f172a; 
@@ -16,38 +17,62 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: 40%;
+            /* Apply futuristic font globally */
+            font-family: 'Orbitron', sans-serif;
         }
+
+        /* Logic for Logo-style text: Bold, Italicized, and Slanted */
+        .logo-font {
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            /* Slants the text forward like the logo */
+            transform: skewX(-10deg);
+            display: inline-block;
+        }
+
         /* Custom Brand Color Palette */
         .gradient-text { 
             background: linear-gradient(90deg, #FFEFAD, #E5A02E); 
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent; 
         }
+
         .glass-panel { 
             background: rgba(30, 41, 59, 0.6); 
             backdrop-filter: blur(12px); 
             border: 1px solid rgba(136, 176, 75, 0.3); /* Moss Green Accents */
         }
+
         .brand-button-main {
             background-color: #E5A02E; /* Amber */
             color: #0f172a;
             box-shadow: 0 4px 15px rgba(155, 89, 182, 0.3); /* Amethyst Glow */
             transition: all 0.3s ease;
+            font-weight: 700;
+            text-transform: uppercase;
         }
+
         .brand-button-main:hover {
             background-color: #FFEFAD; /* Gold */
-            transform: translateY(-2px);
+            transform: translateY(-2px) skewX(-10deg); /* Slanted hover effect */
             box-shadow: 0 6px 20px rgba(136, 176, 75, 0.5); /* Moss Green Glow */
         }
+
         .brand-button-outline {
             border: 2px solid #9B59B6; /* Amethyst */
             color: #9B59B6;
             transition: all 0.3s ease;
+            font-weight: 700;
+            text-transform: uppercase;
         }
+
         .brand-button-outline:hover {
             background-color: rgba(155, 89, 182, 0.1);
             border-color: #FFEFAD;
             color: #FFEFAD;
+            transform: skewX(-10deg);
         }
     </style>
 </head>
